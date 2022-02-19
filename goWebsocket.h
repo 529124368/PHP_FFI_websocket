@@ -68,7 +68,7 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-extern __declspec(dllexport) void startWebsocket();
+extern __declspec(dllexport) void startWebsocket(char* ip, GoInt port);
 
 #ifdef __cplusplus
 }

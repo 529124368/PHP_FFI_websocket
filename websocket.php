@@ -10,9 +10,11 @@
 
  //FFI 注册动态链接库
 $ffi = FFI::cdef(
-    'void startWebsocket();',
+    'void startWebsocket(const char*,int);',
     'goWebsocket.dll'
 );
 
+$ip = '0.0.0.0';
+$port = 8080;
 //启动websocke服务器
-$ffi->startWebsocket();
+$ffi->startWebsocket($ip,$port);
